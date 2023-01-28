@@ -17,8 +17,8 @@ public class Categoria {//entidad
 	@Id
 	@GeneratedValue (strategy =  GenerationType.IDENTITY)
 	@Column (nullable=false)
-	@OneToMany(mappedBy = "categoria")
-	private Set<Publicacion> id_publicacion = new HashSet<>();
+	
+	
 	private Long id;
 	private String nombre;
 	
@@ -28,7 +28,7 @@ public class Categoria {//entidad
 		this.nombre = nombre;
 	}//constructor
 	
-	public Categoria() { }//contructor vacío
+	public Categoria() { }//constructor vacío
 	
 	/*-------------------
 	 * getters y setters

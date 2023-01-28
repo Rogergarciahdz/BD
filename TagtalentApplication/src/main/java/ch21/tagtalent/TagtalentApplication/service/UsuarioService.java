@@ -45,6 +45,7 @@ public class UsuarioService {
 			if (nombre!=null) tmp.setNombre(nombre); 
 			if (apellido!=null) tmp.setApellido(apellido);; 
 			if (correo!=null) tmp.setCorreo(correo); 
+			if (telefono!=null) tmp.setTelefono(telefono); 
 			if (password!=null) tmp.setPassword(password); 
 			if (foto!=null) tmp.setFoto(foto);
 			if (descripcion!=null) tmp.setDescripcion(descripcion);

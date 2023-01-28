@@ -40,7 +40,7 @@ public class PublicacionService {
 		return publicacionRepository.save(publicacion);
 	}//addPublicacion
 	
-	public Publicacion updatePublicacion (Long id, String titulo, String descripcion, String img, Date fecha, int num_reacciones) {
+	public Publicacion updatePublicacion (Long id, String titulo, String descripcion, String img, int num_reacciones) {
 		Publicacion tmp = null;
 		if(publicacionRepository.existsById(id)) {
 			tmp= publicacionRepository.findById(id).get();
