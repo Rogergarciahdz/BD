@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +19,7 @@ import ch21.tagtalent.TagtalentApplication.model.Usuario;
 import ch21.tagtalent.TagtalentApplication.service.PublicacionService;
 
 @RestController
-@RequestMapping(path = "/publicaciones/")
+@RequestMapping(path = "/publicacion/")
 public class PublicacionController {
 private final PublicacionService publicacionService;
 
@@ -43,7 +44,7 @@ public Publicacion deletePublicacion(@PathVariable("pubId") Long id) {
 }
 
 @PostMapping
-public Publicacion addPublicacion(Publicacion publicacion) {
+public Publicacion addPublicacion(@RequestBody Publicacion publicacion){
 	return publicacionService.addPublicacion(publicacion);
 }
 
