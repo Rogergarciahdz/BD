@@ -56,11 +56,12 @@ public Usuario updateUsuario(@PathVariable("usrId") Long Id,
 	@RequestParam(required = false) String correo,
 	@RequestParam(required = false) Long telefono,
 	@RequestParam(required = false) String password,
+	@RequestParam(required = false) String newPassword,
 	@RequestParam(required = false) String foto,
 	@RequestParam(required = false) String descripcion,
 	@RequestParam(required = false) String ciudad) {
 	
-	return usuarioService.updateUsuario(Id, nombre, apellido, correo, telefono,password,foto,descripcion,ciudad);
+	return usuarioService.updateUsuario(Id, nombre, apellido, correo, telefono,password,newPassword,foto,descripcion,ciudad);
 }
 
 	
