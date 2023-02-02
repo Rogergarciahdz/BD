@@ -18,7 +18,7 @@ import ch21.tagtalent.TagtalentApplication.model.Usuario;
 import ch21.tagtalent.TagtalentApplication.service.UsuarioService;
 
 @RestController
-@RequestMapping(path ="/usuario/")
+@RequestMapping(path ="/api/usuario/")
 
 public class UsuarioController {
 private final UsuarioService usuarioService;

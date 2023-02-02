@@ -19,7 +19,7 @@ import ch21.tagtalent.TagtalentApplication.model.Usuario;
 import ch21.tagtalent.TagtalentApplication.service.PublicacionService;
 
 @RestController
-@RequestMapping(path = "/publicacion/")
+@RequestMapping(path = "/api/publicacion/")
 public class PublicacionController {
 private final PublicacionService publicacionService;
 

@@ -22,7 +22,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 
 @RestController
-@RequestMapping (path = "/login/")
+@RequestMapping (path = "/api/login/")
 public class LoginController {
 private final UsuarioService usuarioService;
 	

@@ -19,7 +19,7 @@ import ch21.tagtalent.TagtalentApplication.service.ReaccionesService;
 
 
 @RestController
-@RequestMapping(path = "/reaccion/")
+@RequestMapping(path = "/api/reaccion/")
 public class ReaccionController {
 private final ReaccionesService reaccionesService;
 	@Autowired

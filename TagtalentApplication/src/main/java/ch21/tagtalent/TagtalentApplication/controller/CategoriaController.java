@@ -18,7 +18,7 @@ import ch21.tagtalent.TagtalentApplication.model.Usuario;
 import ch21.tagtalent.TagtalentApplication.service.CategoriaService;
 
 @RestController
-@RequestMapping(path = "/categoria/")
+@RequestMapping(path = "/api/categoria/")
 public class CategoriaController {
 private final CategoriaService categoriaService;
 	@Autowired
