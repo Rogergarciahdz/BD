@@ -119,11 +119,30 @@ $formpost.addEventListener('submit', function (event) {
             let nuevaPublicacion = {
                 titulo: titulo.value,
                 descripcion: publicacion.value, 
-                imagen: $readfile.result,
+                img: $readfile.result,
                 fecha: new Date().toLocaleDateString(),
-                totalReacciones: 0
+                num_reacciones: 0
             }
+            console.log(nuevaPublicacion)
 
+				const URL_MAIN ='/api/publicacion/';
+        fetch(URL_MAIN, {
+              method: 'POST',// or 'PUT'
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(nuevaPublicacion),
+            })
+            .then(response => response.json())
+            .then(nuevaPublicacion => {
+              console.log('Success:', nuevaPublicacion);
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            });
+            
+            
+            
             addItem(nuevaPublicacion);
             removeform();
         }
@@ -148,11 +167,20 @@ let publicaciones = new Array();
 function addItem(item){
 
         publicaciones.unshift(item)
-        localStorage.setItem('publicacion', JSON.stringify(publicaciones))      
+        localStorage.setItem('publicacion', JSON.stringify(publicaciones[0]))      
+        
         console.log(publicaciones);
         cargarPublicacion();
         
+     
+        
+            
+            
+            
     }
+        
+        
+    
 
 function cargarPublicacion() {
     const itemsContainer = document.getElementById("item-publicaciones");

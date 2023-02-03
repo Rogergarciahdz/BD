@@ -212,7 +212,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
             genero: camposObtenidos.sexo_id.value,
             correo: camposObtenidos.correo_id.value,
             telefono: camposObtenidos.telefono_id.value,
-            fechaNacimiento: camposObtenidos.fecha_id.value
+            fecha_nacimiento: camposObtenidos.fecha_id.value
         };
         arrayUsuarios.push(usuario)
         console.log(usuario);
