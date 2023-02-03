@@ -13,7 +13,7 @@ let pass=document.getElementById("pssw_id").value
   			
 		};
 		console.log(form);
-		const url ='/api/usuario/';
+		const url ='/api/login/';
 		fetch(url, {
     method: "POST",
     headers: {
@@ -27,10 +27,10 @@ let pass=document.getElementById("pssw_id").value
     .then((form) => {
       console.log(form);
       // code here //
-      if (error) {
+      if (form.error) {
         swal("Error", "El correo o contraseña son inválidos", "error");
       } else {
-         window.location.replace("http://127.0.0.1:5512/userprofile.html");
+         window.location.replace("http://localhost:8080/userprofile.html");
       }
     })
     .catch((err) => {
